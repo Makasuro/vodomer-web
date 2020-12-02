@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "vodomer-web"
+  "defaultProject": "vodomer-web",
+  "cli": {
+    "analytics": "6b6a220c-b9b3-4332-b774-7ef77dbd4469"
+  }
 }

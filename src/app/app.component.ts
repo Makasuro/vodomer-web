@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VodomerApiService } from './Services/vodomer-api.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,11 @@ import { VodomerApiService } from './Services/vodomer-api.service';
 
 export class AppComponent {
   title = 'vodomer-web';
-  cold:number;
-  constructor(api:VodomerApiService){
-    api.getCold().subscribe(x=> this.cold = x.cold);
+
+  constructor(){
+    
+
+    //api.getCold().subscribe(x=> this.cold = x.cold);
+    //api.getHot().subscribe(x=> this.hot = x.hot);
   }
 }

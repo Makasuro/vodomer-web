@@ -9,6 +9,11 @@ interface ICold {
 interface IHot {
   hot : number
 }
+interface ILastCounters{
+  cold: number,
+  hot: number,
+  date: Date
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -19,5 +24,6 @@ export class VodomerApiService {
 
   getCold = ():Observable<ICold> => this.http.get<ICold>(`${this.baseUrl}water/cold`);
   getHot = ():Observable<IHot> => this.http.get<IHot>(`${this.baseUrl}water/hot`);
+  getLastCounters = ():Observable<ILastCounters> => this.http.get<ILastCounters>(`${this.baseUrl}history/last`);
    
 }

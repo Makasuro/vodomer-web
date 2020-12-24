@@ -7,6 +7,10 @@ import { CountersComponent } from './components/counters/counters.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { MatCardModule } from '@angular/material/card';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

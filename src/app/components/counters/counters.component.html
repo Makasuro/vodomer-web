@@ -1,24 +1,51 @@
-<div *ngIf="loading"> Загрузка... </div>
+<div *ngIf="loading"><mat-spinner></mat-spinner> Загрузка... </div>
 
 <mat-card >
-    <div>Текущие показания счетчиков:</div>
-    <div>Холодной воды: <span>{{cold}}</span></div>
-    <div>Горячей воды: <span>{{hot}}</span></div>
+    <mat-card-header>
+        <mat-card-title>Текущие показания счетчиков:</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div>Холодной воды: <span>{{cold}}</span></div>
+        <div>Горячей воды: <span>{{hot}}</span></div>
+    </mat-card-content>
+</mat-card>
+<br/>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title> Последние переданные показания счетчиков: </mat-card-title>
+        <mat-card-subtitle>на {{historyDate}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div>Холодной воды: <span>{{historyCold}}</span></div>
+        <div>Горячей воды: <span>{{historyHot}}</span></div>
+    </mat-card-content>
+</mat-card>
+<br/>
+<mat-card>
+    <mat-card-header><mat-card-title>Расход:</mat-card-title></mat-card-header>
+    <mat-card-content>
+        <div>Холодной воды: <span>{{rateCold}}</span></div>
+        <div>Горячей воды: <span>{{rateHot}}</span></div>
+    </mat-card-content>
+</mat-card>
+<br/>
+<mat-card>
+ <mat-card-header><mat-card-title>Обновить текущие показания</mat-card-title></mat-card-header>
+ <mat-card-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Холодной воды</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Горячей воды</mat-label>
+        <input matInput>
+      </mat-form-field>
+</mat-card-content>
+<mat-card-actions>
+    <button mat-button >Сохранить</button>
+  </mat-card-actions>
 </mat-card>
 
-<mat-card>
-    <div>Последние переданные показания счетчиков (на {{historyDate}}):</div>
-    <div>Холодной воды: <span>{{historyCold}}</span></div>
-    <div>Горячей воды: <span>{{historyHot}}</span></div>
-</mat-card>
 
-<mat-card>
-    <div>Расход:</div>
-    <div>Холодной воды: <span>{{rateCold}}</span></div>
-    <div>Горячей воды: <span>{{rateHot}}</span></div>
-</mat-card>
-
-<mat-card>
- <div>Обновить текущие показания</div>
-</mat-card>
 

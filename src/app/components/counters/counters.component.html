@@ -31,20 +31,22 @@
 <br/>
 <mat-card>
  <mat-card-header><mat-card-title>Обновить текущие показания</mat-card-title></mat-card-header>
- <mat-card-content>
-    <mat-form-field appearance="fill">
-        <mat-label>Холодной воды</mat-label>
-        <input matInput>
-      </mat-form-field>
+ <form [formGroup]="form" (ngSubmit)="saveCurrentCounters()">
+    <mat-card-content>
+            <mat-form-field appearance="fill">
+                <mat-label>Холодной воды</mat-label>
+                <input matInput  formControlName="newCurrentCold" >
+            </mat-form-field>
 
-    <mat-form-field appearance="fill">
-        <mat-label>Горячей воды</mat-label>
-        <input matInput>
-      </mat-form-field>
-</mat-card-content>
-<mat-card-actions>
-    <button mat-button >Сохранить</button>
-  </mat-card-actions>
+            <mat-form-field appearance="fill">
+                <mat-label>Горячей воды</mat-label>
+                <input matInput  formControlName="newCurrentHot">
+            </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button type="submit" [disabled]="form.invalid" >Сохранить</button>
+    </mat-card-actions>
+</form>
 </mat-card>
 
 

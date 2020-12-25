@@ -11,6 +11,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms"; 
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import {MatInputModule} from '@angular/material/input';
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatInputModule 
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

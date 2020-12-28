@@ -12,14 +12,21 @@ import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"; 
+import { AppRoutingModule } from './app.routing.module';
+import { MemoComponent } from './components/memo/memo.component';
+import { HomeComponent } from './components/home/home.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountersComponent,
-    GraphComponent
+    GraphComponent,
+    MemoComponent,
+    HomeComponent
   ],
   imports: [
+    ChartsModule,
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -29,7 +36,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    AppRoutingModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

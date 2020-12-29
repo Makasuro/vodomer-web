@@ -30,11 +30,11 @@ export class GraphComponent implements OnInit {
   lineChartColors: Color[] = [
     {
       borderColor: 'blue',
-      backgroundColor: 'rgba(255,255,0,0.28)',
+      backgroundColor: 'rgba(104,104,227,0.28)',
     },
     {
       borderColor: 'red',
-      backgroundColor: 'rgba(255,255,0,0.28)',
+      backgroundColor: 'rgba(242,99,133,0.28)',
     },
   ];
 
